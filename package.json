@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "build": "npm run compile && npm run generate-assets",
+    "compile": "npx babel ./ --out-dir dist --ignore node_modules",
+    "generate-assets": "cp -R ./public ./dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@netlify/functions": "^1.6.0",
@@ -17,5 +21,10 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.22",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5"
   }
 }

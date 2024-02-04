@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.dark_mode {
+  background-color: black;
+  color: white;
+}
+.light_mode {
+  background-color: white;
+  color: dark;
+}
